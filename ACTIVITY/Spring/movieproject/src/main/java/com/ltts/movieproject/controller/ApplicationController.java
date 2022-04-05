@@ -1,6 +1,10 @@
- package com.ltts.movieproject.controller;
+  package com.ltts.movieproject.controller;
 
-import org.hibernate.mapping.List;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,23 +35,23 @@ public class ApplicationController {
 		return new ModelAndView("insertmovie");
 	}
 	@RequestMapping(value="insert_the_player",method=RequestMethod.POST)
-	public ModelAndView m4(HttpServeletRequest req)
+	public ModelAndView m4(HttpServletRequest req)
 	{
 		int pnum=Integer.parseInt(req.getParameter("num"));
-		String pname=req.getparameter("pname");
+		String pname=req.getParameter("pname");
 		
 		Movie m=new Movie();
 		try
 		{
-			m.save();
+			//m.save();
 		}
 		catch(Exception e)
 		{
 			
 		}
-		return new ModelAndview("success");
+		return new ModelAndView("success");
 	}
-	@RequestMapping("viewmovie");
+	@RequestMapping("viewmovie")
 	public ModelAndView m5()
 	{
 		List<Movie> li=pb.findAll();
