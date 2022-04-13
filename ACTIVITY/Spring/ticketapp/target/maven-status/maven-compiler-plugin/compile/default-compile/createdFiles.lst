@@ -1,0 +1,4 @@
+com\ltts\ticketapp\model\Ticket.class
+com\ltts\ticketapp\TicketappApplication.class
+com\ltts\ticketapp\controller\TicketController.class
+com\ltts\ticketapp\bo\TicketBo.class
